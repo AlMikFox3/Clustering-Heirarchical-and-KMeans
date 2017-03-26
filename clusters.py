@@ -345,19 +345,19 @@ def draw2d(data, labels, jpeg='mds2d.jpg'):
         draw.text((x, y), labels[i], (0, 0, 0))
     img.save(jpeg, 'JPEG')
 
-##blognames,words,data=readfile('blogdata.txt')
-##clust = hcluster(data)
-##printclust(clust,labels=blognames)
-##drawdendrogram(clust,blognames,jpeg='blogclust.jpg')
-##
-##rdata=rotatematrix(data)
-##wordclust=hcluster(rdata)
-##printclust(wordclust,labels=words)
-##drawdendrogram(wordclust,labels=words,jpeg='wordclust.jpg')
-##
-##wants,people,data=readfile('zebo.txt')
-##clust=hcluster(data,distance=tanamoto)
-##drawdendrogram(clust,wants)
+blognames,words,data=readfile('blogdata.txt')
+clust = hcluster(data)
+printclust(clust,labels=blognames)
+drawdendrogram(clust,blognames,jpeg='blogclust.jpg')
+
+rdata=rotatematrix(data)
+wordclust=hcluster(rdata)
+printclust(wordclust,labels=words)
+drawdendrogram(wordclust,labels=words,jpeg='wordclust.jpg')
+
+wants,people,data=readfile('zebo.txt')
+clust=hcluster(data,distance=tanamoto)
+drawdendrogram(clust,wants)
 
 blognames,words,data=readfile('blogdata.txt')
 coords=scaledown(data)
